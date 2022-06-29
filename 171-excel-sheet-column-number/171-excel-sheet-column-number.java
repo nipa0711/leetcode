@@ -10,8 +10,7 @@ class Solution {
         int sum = 0;
         for (int i=0; i<columnTitle.length(); i++) {
             char c = columnTitle.charAt(i);
-            int num = map.get(c);
-            sum += num * Math.pow(26, columnTitle.length()-1-i);
+            sum += map.get(c) * Math.pow(26, columnTitle.length()-1-i);
         }
         return sum;
     }
