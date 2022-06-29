@@ -13,8 +13,6 @@ class Solution {
                 if (nums1[i] <= nums2[j]) {
                     continue;
                 }
-                //System.out.println("nums1[i] : " + nums1[i]);
-                //System.out.println("nums2[j] : " + nums2[j]);
                 int temp = nums1[i];
                 nums1[i] = nums2[j];
                 nums2[j] = temp;
@@ -29,17 +27,7 @@ class Solution {
                 int temp = nums2[i];
                 nums2[i] = nums2[j];
                 nums2[j] = temp;
-                //System.out.println("temp : " + temp);
             }
-            //System.out.println("nums2[i] : " + nums2[i]);
-        }
-        
-        for (int num : nums1) {
-            //System.out.println("num1 : " + num);
-        }
-        
-        for (int num : nums2) {
-            //System.out.println("num2 : " + num);
         }
         
         int idx = 0;
