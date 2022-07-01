@@ -1,7 +1,6 @@
 class Solution {
     public String licenseKeyFormatting(String s, int k) {
-        s = s.replace("-","");
-        s = s.toUpperCase();
+        s = s.replace("-","").toUpperCase();
         
         String answer = "";
         int count = 0;
