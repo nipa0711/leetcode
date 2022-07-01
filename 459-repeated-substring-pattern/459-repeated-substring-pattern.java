@@ -12,8 +12,7 @@ class Solution {
         for (int i=0; i<listSize; i++) {
             String str = s.substring(0, list.get(i));
             String temp = "";
-            int strSize = str.length();
-            for (int j=1; j<=sSize/strSize; j++) {
+            for (int j=1; j<=sSize/str.length(); j++) {
                 temp += str;
                 if (j>1) {
                     int tempLen = temp.length();
