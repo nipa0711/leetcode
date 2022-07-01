@@ -8,11 +8,10 @@ class Solution {
 			}
 		}
         
-        String temp = "";
         final int listSize = list.size();
         for (int i=0; i<listSize; i++) {
             String str = s.substring(0, list.get(i));
-            temp = "";
+            String temp = "";
             for (int j=1; j<=sSize/str.length(); j++) {
                 temp += str;
                 if (j>1) {
