@@ -13,6 +13,13 @@ class Solution {
             String temp = "";
             for (int j=1; j<=sSize/str.length(); j++) {
                 temp += str;
+                if (j>1) {
+                    int tempLen = temp.length();
+                    String check = s.substring(0, tempLen);
+                    if (!temp.equals(check)) {
+                        break;
+                    }
+                }
             }
             if (temp.equals(s)) {
                 return true;
