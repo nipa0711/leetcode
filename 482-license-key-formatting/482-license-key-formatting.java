@@ -15,7 +15,6 @@ class Solution {
             count++;
         }
         StringBuffer sb = new StringBuffer(answer);
-        String reversedStr = sb.reverse().toString();        
-        return reversedStr;
+        return sb.reverse().toString();
     }
 }
