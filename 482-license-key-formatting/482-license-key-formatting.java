@@ -9,9 +9,8 @@ class Solution {
             if (count == k) {
                 answer += "-";
                 count = 0;
-            }
-            char ch = s.charAt(s.length()-1-i);            
-            answer += ch;
+            }     
+            answer += s.charAt(s.length()-1-i);
             count++;
         }
         StringBuffer sb = new StringBuffer(answer);
