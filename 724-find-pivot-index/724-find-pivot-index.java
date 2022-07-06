@@ -9,7 +9,6 @@ class Solution {
     public int pivotIndex(int[] nums) {
         int leftSum = 0;
         int rightSum = 0;
-        int start = 0;
         int last = nums.length;
         for (int pivot = 0; pivot<last; pivot++) {
             if (pivot == 0) {
