@@ -10,19 +10,14 @@ class MyStack {
     }
     
     public int pop() {
-        System.out.println("pop");
         for (int i=0; i<queue.size()-1; i++) {
             int num = queue.poll();
             queue.offer(num);
         }
-        System.out.println("queue : " + queue);
-        System.out.println("queue.peek : " + queue.peek());
         return queue.poll();
     }
     
     public int top() {
-        System.out.println("top");
-        System.out.println("queue : " + queue);
         Queue<Integer> temp = new LinkedList<>();
         for (int num : queue) {
             temp.offer(num);
@@ -31,8 +26,6 @@ class MyStack {
             int num = temp.poll();
             temp.offer(num);
         }
-        System.out.println("queue : " + queue);
-        System.out.println("temp.peek() : " + temp.peek());
         return temp.peek();
     }
     
