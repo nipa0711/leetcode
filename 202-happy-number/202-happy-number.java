@@ -4,9 +4,8 @@ class Solution {
         Map<String, Integer> map = new HashMap<>();
         do {
             int sum = 0;
-            char[] arr = str.toCharArray();
-            for (int i=0; i<arr.length; i++) {
-                int num = arr[i] - '0';
+            for (int i=0; i<str.length(); i++) {
+                int num = str.charAt(i) - '0';
                 sum += num * num;
             }
             str = "" + sum;
