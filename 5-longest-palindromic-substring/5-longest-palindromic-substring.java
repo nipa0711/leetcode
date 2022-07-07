@@ -20,7 +20,7 @@ class Solution {
                     break;
                 }
                 String parse = s.substring(i, s.length()-j);
-                if (checkPalindrome(parse)) {
+                if (checkPalindrome(parse) && parse.length() > answer.length()) {
                     answer = parse;
                 }
             }
