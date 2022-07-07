@@ -10,8 +10,7 @@ class Solution {
                 sum += num * num;
             }
             str = "" + sum;
-            String check = str.replaceAll("0","");
-            if ("1".equals(check)) {
+            if ("1".equals(str.replaceAll("0",""))) {
                 return true;
             }
             if (!map.containsKey(str)) {
