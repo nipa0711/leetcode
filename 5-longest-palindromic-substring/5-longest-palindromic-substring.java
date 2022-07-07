@@ -8,18 +8,19 @@ class Solution {
         return true;
     }
     public String longestPalindrome(String s) {
-        if (s.length() == 1) {
+        int sSize = s.length();
+        if (sSize == 1) {
             return s;
         }
         String answer = "";
-        for (int i=0; i<s.length()-1; i++) {  
-            for (int j=0; j<s.length(); j++) { 
-                if (i>=s.length()-j) {
+        for (int i=0; i<sSize-1; i++) {  
+            for (int j=0; j<sSize; j++) { 
+                if (i>=sSize-j) {
                     break;
-                } else if (s.length()-j - i < answer.length()) {
+                } else if (sSize-j - i < answer.length()) {
                     break;
                 }
-                String parse = s.substring(i, s.length()-j);
+                String parse = s.substring(i, sSize-j);
                 if (checkPalindrome(parse) && parse.length() > answer.length()) {
                     answer = parse;
                 }
