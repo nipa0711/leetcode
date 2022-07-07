@@ -13,6 +13,7 @@ class Solution {
             return s;
         }
         String answer = "";
+        String parse = "";
         for (int i=0; i<sSize-1; i++) {  
             for (int j=0; j<sSize; j++) { 
                 if (i>=sSize-j) {
@@ -20,7 +21,7 @@ class Solution {
                 } else if (sSize-j - i < answer.length()) {
                     break;
                 }
-                String parse = s.substring(i, sSize-j);
+                parse = s.substring(i, sSize-j);
                 if (checkPalindrome(parse) && parse.length() > answer.length()) {
                     answer = parse;
                 }
