@@ -12,7 +12,6 @@ class Solution {
             return s;
         }
         String answer = "";
-        StringBuilder sb;
         for (int i=0; i<s.length()-1; i++) {  
             for (int j=0; j<s.length(); j++) { 
                 if (i>=s.length()-j) {
