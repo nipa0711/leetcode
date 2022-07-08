@@ -22,7 +22,6 @@ class Solution {
                 break;
             }
         }
-        System.out.println("sb.toString() : " + sb.toString());
         
         try {
             BigInteger bigInt = new BigInteger(sb.toString());
@@ -31,7 +30,6 @@ class Solution {
             } else if (bigInt.compareTo(new BigInteger("" + Integer.MIN_VALUE)) == -1) {
                 return Integer.MIN_VALUE;
             }
-            System.out.println("test : " + bigInt.toString());
             return Integer.parseInt(bigInt.toString());
         } catch (Exception e) {
             return 0;
