@@ -7,7 +7,6 @@ class Solution {
             }
             result *= num;
         }
-        System.out.println("result : " + result);
         if (result > 0) {
             return 1;
         } else {
