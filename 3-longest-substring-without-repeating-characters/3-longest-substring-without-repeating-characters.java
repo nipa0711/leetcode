@@ -9,8 +9,9 @@ class Solution {
         int max = 0;
         List<String> list = new ArrayList<>();
         boolean neverDuplicated = true;
+        Map<Character, Integer> map = new LinkedHashMap<>();
         for (int i=0; i<arr.length-1; i++) {
-            Map<Character, Integer> map = new LinkedHashMap<>();
+            map.clear();
             map.put(arr[i], i);
             for (int j=i+1; j<arr.length; j++) {
                 if (map.containsKey(arr[j])) {
