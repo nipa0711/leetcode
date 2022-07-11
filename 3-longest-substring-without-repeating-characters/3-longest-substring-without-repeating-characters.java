@@ -15,7 +15,6 @@ class Solution {
             for (int j=i+1; j<arr.length; j++) {
                 if (map.containsKey(arr[j])) {
                     String temp = s.substring(i, j);
-                    System.out.println(temp);
                     if (!list.contains(temp) && temp.length() > max) {
                         list.add(temp);
                         max = temp.length();
