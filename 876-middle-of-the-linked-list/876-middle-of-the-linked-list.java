@@ -19,10 +19,8 @@ class Solution {
         return count;
     }
     public ListNode middleNode(ListNode head) {
-        int count = ListNodeSize(head)/2;
-        //System.out.println("count : " + count);
         ListNode listNode = head;
-        for (int i=0; i<count; i++) {
+        for (int i=0; i<ListNodeSize(head)/2; i++) {
             listNode = listNode.next;
         }
         
