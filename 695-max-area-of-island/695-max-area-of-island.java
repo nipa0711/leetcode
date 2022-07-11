@@ -8,9 +8,7 @@ class Solution {
     }
     int[][] isVisited;
     
-    public int processIsland(Queue<Pixel> queue, int[][] grid) {     
-        int width = grid[0].length;
-        int height = grid.length;
+    public int processIsland(Queue<Pixel> queue, int[][] grid, int width, int height) {
         int count = 0;
         
         while (!queue.isEmpty()) {
@@ -51,7 +49,7 @@ class Solution {
             for (int j=0; j<width; j++) {
                 if (grid[i][j] == 1 && isVisited[i][j] != -1) {
                     queue.add(new Pixel(i, j));
-                    int count = processIsland(queue, grid);
+                    int count = processIsland(queue, grid, width, height);
                     max = Math.max(max, count);
                 }
             }
