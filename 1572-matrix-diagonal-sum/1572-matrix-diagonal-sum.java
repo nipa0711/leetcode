@@ -11,7 +11,6 @@ class Solution {
             start++;
             end--;
         }
-        System.out.println("sum : " + sum);
         return sum;
     }
 }
