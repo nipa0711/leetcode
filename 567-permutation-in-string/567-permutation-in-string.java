@@ -12,9 +12,8 @@ class Solution {
             sum += ch;
         }
         int[] sumArr = new int[s2.length()];
-        //sumArr[0] = (double)s2.charAt(0);
         for (int i=0; i<s2.length(); i++) {
-            sumArr[i] = s2.charAt(i);// + sumArr[i-1];
+            sumArr[i] = s2.charAt(i);
         }        
         
         if (s2.length() == s1.length()) {
@@ -33,15 +32,11 @@ class Solution {
             }
         }
         
-        System.out.println("sum : " + sum);
         for (int i=0; i<s2.length()-s1.length()+1; i++) {
             int count = 0;
             for (int j=0; j<s1.length(); j++) {
-                count+=sumArr[j+i];
-                //System.out.println("count : " + count);
-                //System.out.println("sumArr[j+i] : " + sumArr[j+i]);
+                count += sumArr[j+i];
                 if (count == sum) {
-                    //System.out.println("str : " + s2.substring(i, j+i+1));
                     char[] check = s2.substring(i, j+i+1).toCharArray();
                     Arrays.sort(check);
                     if (Arrays.equals(arr, check)) {
@@ -50,21 +45,6 @@ class Solution {
                 }
             }
         }
-        /*
-        for (int i=0; i<s2.length()-s1.length()+1; i++) {
-            System.out.println("idx : " + (s1.length()-1+i));
-            int temp = sumArr[s1.length()-1+i] - sumArr[i];
-            System.out.println("temp : " + temp);
-            System.out.println("sumArr[i] : " + sumArr[i]);
-            if (temp == sum) {
-                System.out.println("str : " + s2.substring(i+1, s1.length()+i+1));
-                char[] check = s2.substring(i+1, s1.length()+i+1).toCharArray();
-                Arrays.sort(check);
-                if (Arrays.equals(arr, check)) {
-                    return true;
-                }
-            }
-        }*/
         return false;
     }
 }
