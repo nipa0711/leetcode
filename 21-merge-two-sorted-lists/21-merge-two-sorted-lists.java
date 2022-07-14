@@ -25,12 +25,12 @@ class Solution {
         Collections.sort(list);
         ListNode answer = new ListNode(list.get(0));
         for (int i=1; i<list.size(); i++) {
-            ListNode temp = new ListNode(list.get(i));
+            //ListNode temp = ;
             ListNode node = answer;
             while (node.next != null) {
                 node = node.next;
             }
-            node.next = temp;
+            node.next = new ListNode(list.get(i));
         }
         return answer;
     }
