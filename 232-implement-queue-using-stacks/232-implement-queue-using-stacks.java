@@ -12,16 +12,12 @@ class MyQueue {
     }
     
     public int pop() {
-        System.out.println("pop");
         stack2.clear();
         int stackSize = stack.size();
         for (int i=0; i<stackSize-1; i++) {
             int num = stack.pop();
-            System.out.println("stack.size() : " + num);
             stack2.push(num);
         }
-        System.out.println("stack : " + stack);
-        System.out.println("stack2 : " + stack2);
         int answer = stack.pop();
         stack.clear();
         int stack2Size = stack2.size();
@@ -29,13 +25,10 @@ class MyQueue {
             int num = stack2.pop();
             stack.push(num);
         }
-        System.out.println("stack : " + stack);
-        System.out.println("stack2 : " + stack2);
         return answer;
     }
     
     public int peek() {
-        System.out.println("peek");
         stack2.clear();
         int stackSize = stack.size();
         for (int i=0; i<stackSize-1; i++) {
@@ -49,8 +42,6 @@ class MyQueue {
             int num = stack2.pop();
             stack.push(num);
         }
-        System.out.println("stack : " + stack);
-        System.out.println("stack2 : " + stack2);
         return answer;
     }
     
