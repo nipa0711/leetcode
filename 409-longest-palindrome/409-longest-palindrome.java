@@ -22,8 +22,6 @@ class Solution {
             answer++;
         }
         
-        System.out.println("answer : " + answer);
-        System.out.println(map);
         return answer;
     }
 }
