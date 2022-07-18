@@ -1,6 +1,6 @@
 class Solution {
     public int arrangeCoins(int n) {
-        double answer = 0;
+        long answer = 0;
         for (int i=1; i<=n; i++) {
             answer += i;
             if (answer > n) {
