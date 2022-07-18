@@ -14,7 +14,7 @@ class Solution {
             } else if (value % 2 == 1 && value > 1) {
                 answer += (value -1);
                 once = true;
-            } else if (value == 1) {
+            } else if (value == 1 && !once) {
                 once = true;
             }
         }
