@@ -15,21 +15,21 @@ public class Solution {
         }
         
         int size = str.length();
-        String temp = "";
+        StringBuilder sb = new StringBuilder();
         for (int i=0; i<=32-size; i++) {
-            temp += "1";
+            sb.append("1");
         }
         str = str.replace("-", "");
         char[] chars = str.toCharArray();
         for (int i=0; i<size-1; i++) {
             int num = Character.getNumericValue(chars[i]);
             if (num == 0) {
-                temp += "1";
+                sb.append("1");
             } else {
-                temp += "0";
+                sb.append("0");
             }
         }
-        bigInt = new BigInteger(temp, 2);
+        bigInt = new BigInteger(sb.toString(), 2);
         bigInt = bigInt.add(new BigInteger("1", 2));
         String result = bigInt.toString(2);
         result = result.replace("0","");
