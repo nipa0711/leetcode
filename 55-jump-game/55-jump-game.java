@@ -1,7 +1,6 @@
 class Solution {
     public boolean canJump(int[] nums) {
-        int size = nums.length;
-        boolean[] visited = new boolean[size];
+        boolean[] visited = new boolean[nums.length];
         Queue<Integer> queue = new LinkedList<>();
         visited[0] = true;
         queue.add(0);
@@ -11,11 +10,11 @@ class Solution {
             for (int i=1; i<=nums[index]; i++) {
                 int newIdx = index + i;
                 
-                if (!(0 <= newIdx && newIdx < size) || visited[newIdx]) {
+                if (!(0 <= newIdx && newIdx < nums.length) || visited[newIdx]) {
                     continue;
                 }                    
                 
-                if (newIdx == size - 1) {
+                if (newIdx == nums.length - 1) {
                     return true;
                 }                    
                 
@@ -24,6 +23,6 @@ class Solution {
             }
         }
         
-        return visited[size-1];
+        return visited[nums.length-1];
     }
 }
