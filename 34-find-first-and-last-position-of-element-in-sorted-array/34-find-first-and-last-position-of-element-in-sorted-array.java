@@ -11,6 +11,8 @@ class Solution {
         for (int i=index; i>=0; i--) {
             if (nums[i] == target) {
                 start = i;
+            } else {
+                break;
             }
         }
         
@@ -18,6 +20,8 @@ class Solution {
         for (int i=index; i<nums.length; i++) {
             if (nums[i] == target) {
                 end = i;
+            } else {
+                break;
             }
         }
         answer[0] = start;
