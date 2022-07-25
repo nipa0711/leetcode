@@ -8,6 +8,9 @@ class Solution {
         while(!queue.isEmpty()) {
             int index = queue.poll();
             for (int i=1; i<=nums[index]; i++) {
+                if (index + nums[index] > nums.length) {
+                    return true;
+                }
                 int newIdx = index + i;
                 
                 if (!(0 <= newIdx && newIdx < nums.length) || visited[newIdx]) {
