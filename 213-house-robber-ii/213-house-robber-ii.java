@@ -26,11 +26,7 @@ class Solution {
         
         for (int i = 2; i < store2.length; i++) {
             store2[i] = Math.max(store2[i - 1], store2[i - 2] + store2[i]);
-        }
-        
-        System.out.println("store1[store1.length - 1] : " + store1[store1.length - 1]);
-        System.out.println("store2[store2.length - 1] : " + store2[store2.length - 1]);
-        
+        }        
 
         return Math.max(store1[store1.length - 1], store2[store2.length - 1]);
     }
