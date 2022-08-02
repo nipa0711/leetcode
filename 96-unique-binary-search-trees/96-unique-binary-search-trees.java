@@ -10,9 +10,6 @@ class Solution {
             factorial[i] = factorial[i-1].multiply(new BigDecimal(i));
         }
         
-        BigDecimal up = factorial[2*n];
-        BigDecimal down = factorial[n].multiply(factorial[n+1]);
-        
-        return Integer.parseInt(up.divide(down).toString());
+        return factorial[2*n].divide(factorial[n].multiply(factorial[n+1])).intValue();
     }
 }
