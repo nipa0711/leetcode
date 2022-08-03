@@ -9,8 +9,7 @@ class Solution {
         }
         
         for (int i=0; i<arr.length; i++) {
-            int num = queue.poll();
-            arr[i] = num;
+            arr[i] = queue.poll();
         }
     }
 }
