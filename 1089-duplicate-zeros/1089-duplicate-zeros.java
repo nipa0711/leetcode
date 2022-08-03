@@ -6,9 +6,6 @@ class Solution {
                 queue.add(0);
             }
             queue.add(num);
-            if (queue.size() == arr.length) {
-                break;
-            }
         }
         
         for (int i=0; i<arr.length; i++) {
