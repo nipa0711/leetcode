@@ -36,9 +36,8 @@ class Solution {
             for (int i=0; i<word.length(); i++) {
                 sb.append(map.get(word.charAt(i)));
             }
-            String result = sb.toString();
-            if (!list.contains(result)) {
-                list.add(result);
+            if (!list.contains(sb.toString())) {
+                list.add(sb.toString());
             }            
         }
         return list.size();
