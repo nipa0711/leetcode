@@ -34,8 +34,7 @@ class Solution {
         for (String word : words) {
             StringBuilder sb = new StringBuilder();
             for (int i=0; i<word.length(); i++) {
-                char ch = word.charAt(i);
-                sb.append(map.get(ch));
+                sb.append(map.get(word.charAt(i)));
             }
             String result = sb.toString();
             if (!list.contains(result)) {
