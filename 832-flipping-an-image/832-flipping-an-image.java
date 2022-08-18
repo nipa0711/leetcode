@@ -1,7 +1,8 @@
 class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
+        Stack<Integer> stack = new Stack<>();
         for (int i=0; i<image.length; i++) {
-            Stack<Integer> stack = new Stack<>();
+            stack.clear();
             for (int num : image[i]) {
                 stack.add(num);
             }
