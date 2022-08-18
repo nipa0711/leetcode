@@ -20,9 +20,6 @@ class Solution {
             }
             first = i;
         }
-        System.out.println("map : " + map);
-        System.out.println("first : " + first);
-        System.out.println("last : " + last);
         if (first == last) {
             Collection<Integer> values = map.values();
             for(int value : values) {
@@ -37,7 +34,6 @@ class Solution {
         temp[first] = temp[last];
         temp[last] = ch;
         s = String.valueOf(temp);
-        System.out.println("s : " + s);
         
         return s.equals(goal);
     }
