@@ -13,8 +13,6 @@ class Solution {
                 answer++;
             }
         }
-        System.out.println("answer : " + answer);
-        System.out.println("num : " + num);
         return answer;
     }
 }
