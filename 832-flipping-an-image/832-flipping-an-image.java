@@ -8,8 +8,7 @@ class Solution {
             }
             int j=0;
             while (!stack.isEmpty()) {
-                int num = stack.pop();
-                if (num == 0) {
+                if (stack.pop() == 0) {
                     image[i][j] = 1;
                 } else {
                     image[i][j] = 0;
