@@ -18,8 +18,7 @@ class Solution {
             for (int i=1; i<list.size(); i++) {
                 BigInteger b1 = BigInteger.valueOf(list.get(i-1));
                 BigInteger b2 = BigInteger.valueOf(list.get(i));
-                BigInteger temp = b1.gcd(b2);
-                gcd = Math.min(temp.intValue(), gcd);
+                gcd = Math.min(b1.gcd(b2).intValue(), gcd);
             }            
         }        
         
