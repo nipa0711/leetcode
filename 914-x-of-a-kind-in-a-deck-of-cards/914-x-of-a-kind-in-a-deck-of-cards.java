@@ -14,8 +14,6 @@ class Solution {
         List<Integer> list = new ArrayList<>(map.values()); 
         int gcd = list.get(0);
         
-        System.out.println("list : " + list);
-        
         if (list.size() > 1) {
             for (int i=1; i<list.size(); i++) {
                 BigInteger b1 = BigInteger.valueOf(list.get(i-1));
@@ -25,7 +23,6 @@ class Solution {
             }            
         }        
         
-        System.out.println("gcd : " + gcd);
         if (deck.length % gcd != 0) {
             return false;
         } else if (gcd == 1) {
@@ -38,8 +35,6 @@ class Solution {
                 value = deck[i+1];
                 idx = 1;
             } else if (idx < gcd) {
-                System.out.println("value : " + value);
-                System.out.println("deck[i] : " + deck[i]);
                 if (value != deck[i]) {
                     return false;
                 }
