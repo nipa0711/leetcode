@@ -5,7 +5,6 @@ class Solution {
         if (deck.length == 1) {
             return false;
         }
-        Arrays.sort(deck);
         Map<Integer, Integer> map = new HashMap<>();
         for (int num : deck) {
             map.put(num, map.getOrDefault(num, 0) + 1);
@@ -28,6 +27,7 @@ class Solution {
             return false;
         }
         int idx = 1;
+        Arrays.sort(deck);
         int value = deck[0];
         for (int i=1; i<deck.length-1; i++) {
             if (idx == gcd) {
