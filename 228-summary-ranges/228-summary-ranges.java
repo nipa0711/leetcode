@@ -14,17 +14,15 @@ class Solution {
                 key = num;
             }
         }
-        System.out.println("map : " + map);
+        
         for (Integer num : map.keySet()) {
             int value = map.get(num);
             if (num == value) {
-                list.add(""+value);
+                list.add("" + value);
             } else {
-                list.add(num+"->"+value);
+                list.add(num + "->" + value);
             }
-        }
-        System.out.println("list : " + list);
-        
+        }        
         
         return list;
     }
