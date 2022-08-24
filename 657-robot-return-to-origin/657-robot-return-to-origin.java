@@ -8,22 +8,20 @@ class Solution {
         
         if (map.containsKey('U') != map.containsKey('D')) {
             return false;
-        } else {
-            if (map.get('U') != null && map.get('D') != null) {
-                if (!map.get('U').equals(map.get('D'))) {
-                    return false;
-                }
-            } 
+        } else if (map.get('U') != null && map.get('D') != null) {
+            if (!map.get('U').equals(map.get('D'))) {
+                return false;
+            }
         }
+        
         if (map.containsKey('L') != map.containsKey('R')) {
             return false;
-        } else {
-            if (map.get('L') != null && map.get('R') != null) {
-                if (!map.get('L').equals(map.get('R'))) {
-                    return false;
-                }
-            }            
+        } else if (map.get('L') != null && map.get('R') != null) {
+            if (!map.get('L').equals(map.get('R'))) {
+                return false;
+            }
         }
+        
         return true;
     }
 }
