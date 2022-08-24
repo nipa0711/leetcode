@@ -7,8 +7,6 @@ class Solution {
         } else if (n<0 || n%3 != 0) {
             return false;
         }
-        String str = new BigInteger(String.valueOf(n)).toString(3);
-        str = str.replace("0","");
-        return "1".equals(str);
+        return "1".equals(new BigInteger(String.valueOf(n)).toString(3).replace("0",""));
     }
 }
