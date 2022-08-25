@@ -13,9 +13,6 @@ class Solution {
             list2.add(num);
         }
         list1.removeAll(list2);
-        System.out.println(list1);
-        
-        System.out.println(map);
         
         int index = 0;
         for (int key : arr2) {
@@ -27,7 +24,6 @@ class Solution {
         for (int i=0; i<list1.size(); i++) {
             arr1[index++] = list1.get(i);
         }
-        System.out.println("index : " + index);
         return arr1;
     }
 }
