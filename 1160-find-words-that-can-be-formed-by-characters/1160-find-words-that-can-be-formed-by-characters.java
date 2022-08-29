@@ -5,7 +5,6 @@ class Solution {
             char ch = chars.charAt(i);
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
-        System.out.println("map : " + map);
         
         int sum = 0;
         for (String word : words) {
@@ -18,7 +17,6 @@ class Solution {
                 }
                 temp.put(ch, temp.getOrDefault(ch, 0) + 1);
             }
-            System.out.println("temp : " + temp);
             
             boolean check = false;
             for (Character ch : temp.keySet()) {
