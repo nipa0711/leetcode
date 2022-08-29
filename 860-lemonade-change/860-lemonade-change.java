@@ -6,8 +6,6 @@ class Solution {
         map.put(20, 0);
         
         for (int money : bills) {
-            System.out.println("money : " + money);
-            System.out.println("map : " + map);
             switch (money) {
                 case 5:
                     map.put(money, map.getOrDefault(money, 0) +1);
