@@ -30,9 +30,7 @@ class Solution {
         }
         
         while(!sStack.isEmpty()) {
-            char ch1 = sStack.pop();
-            char ch2 = tStack.pop();
-            if (ch1 != ch2) {
+            if (sStack.pop() != tStack.pop()) {
                 return false;
             }
         }
